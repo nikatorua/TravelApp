@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentHome">
+
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.example.travelapp.fragments.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentAdd"
+            app:destination="@id/fragmentAdd" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentProfile"
+        android:name="com.example.travelapp.fragments.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_fragmentProfile_to_fragmentAppInfo"
+            app:destination="@id/fragmentAppInfo" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentAdd"
+        android:name="com.example.travelapp.fragments.AddFragment"
+        android:label="AddFragment"
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_fragmentAdd_to_fragmentProfile"
+            app:destination="@id/fragmentProfile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentAppInfo"
+        android:name="com.example.travelapp.fragments.AppInfoFragment"
+        android:label="AppInfoFragment"
+        tools:layout="@layout/fragment_app_info" />
+
+</navigation>
